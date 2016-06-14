@@ -5,10 +5,11 @@
 
 h1 {
   color: #56b6c2;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 h2 {
+  font-weight: bold;
   padding-top: 0px;
   padding-bottom: 0px;
   margin-top: 0px;
