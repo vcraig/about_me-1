@@ -81,7 +81,7 @@ function runLogic() {
   var counterAnswer6 = 0;
   while(counterAnswer6 < 4) {
     var Answer6 = parseInt(prompt('How many states has Dylan lived in, including Washington State? You only get 4   tries.'));
-        if (Answer6 === 2) {
+    if (Answer6 === 2) {
       console.log('correct');
       alert('That\'s spot on!');
       correctAns++;
@@ -89,10 +89,10 @@ function runLogic() {
     }
     // can move counterAnswer6++ to outside } on line 82
     else if (Answer6 < 2) {
-    console.log('visitor response to Question 6 is ' + Answer6 + ': incorrect');
-    alert('That\'s too low, try again!');
-    counterAnswer6++;
-  }
+      console.log('visitor response to Question 6 is ' + Answer6 + ': incorrect');
+      alert('That\'s too low, try again!');
+      counterAnswer6++;
+    }
   else if (isNaN(Answer6)) {
     console.log('visitor response to Question 6 is ' + Answer6 + ': incorrect');
     alert('That\'s not a number. Unfortunately, we are REALLY looking for a number as an answer.');
@@ -103,7 +103,7 @@ function runLogic() {
     alert('That\'s too high, try again!');
     counterAnswer6++;
   }
-}
+  }
 }
 runLogic();
 alert('Alrighty, onto the next (and final) question. Here we go!');
@@ -148,7 +148,7 @@ function runLogic7() {
     alert('That\'s not correct. Try again!');
     counterAnswer7++;
   }
-}
+  }
 }
 runLogic7();
 alert('You got ' + correctAns + ' out of 7 questions correct, ' + userName + '! Better luck next time.');
