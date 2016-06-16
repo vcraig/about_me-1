@@ -64,6 +64,7 @@ while(counterAnswer6 < 4) {
     correctAns++;
     break;
   }
+  // can move counterAnswer6++ to outside } on line 82
   else if (Answer6 < 2) {
     console.log('visitor response to Question 6 is ' + Answer6 + ': incorrect');
     alert('That\'s too low, try again!');
@@ -83,6 +84,20 @@ while(counterAnswer6 < 4) {
 
 alert('Alrighty, onto the next (and final) question. Here we go!');
 
+/*
+this needs multiple correct text answers (not just permutations of the answer)
+need an array above question 7 that lists the multiple correct answers for question 7
+need to add a for loop within the whilie loop --> for (var k = 0; k < arrayName.length; k++)
+Then have the if statements be included in the for loop
+  - if statements should evaluate (Answer7 === arrayName[k])
+  - remove the else statements because you only need to evaluate a single array
+
+Also, can make this much more elegant than simply using break;
+Instead, set a variable like 'matchesAnswer7 = false;'
+then in the while use while(matchesAnswer7 === false && counterAnswer7 < 7)
+Add a second if statement outside of the for loop that acts as a catch-all for any incorrect answer
+  - if you added this into the inside of the for statement, the negative alert would run every single time a single item in the array is read
+*/
 var counterAnswer7 = 0;
 while(counterAnswer7 < 7) {
   var Answer7 = prompt('Which state did Dylan live in besides Washington State? You have a total of 7 tries.').toLowerCase();
@@ -92,6 +107,7 @@ while(counterAnswer7 < 7) {
     correctAns++;
     break;
   }
+  // can move counterAnswer7++ to outside } on line 111
   else if (Answer7 === 'washington' || Answer7 === 'washington state' || Answer7 === 'wa') {
     console.log('visitor response to Question 7 is ' + Answer7 + ': not valid response');
     alert('You aren\'t reading the questions, are you?');
