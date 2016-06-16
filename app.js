@@ -54,7 +54,13 @@ if (answer5 === 'yes' || answer5 === 'yep' || answer5 === 'i think so' || answer
   console.log(userName + ' did not answer yes to question5 (\'Is Dylan overly obsessed with Seattle sports teams?\'). His answer was: ' + answer5);
   alert('Nope. You\'re wrong. He is all about the Seattle sports teams.');
 }
-
+/*
+Also, can make this much more elegant than simply using break;
+Instead, set a variable like 'matchesAnswer6 = false;'
+then in the while use while(matchesAnswer6 === false && counterAnswer6 < 4)
+Add a second if statement outside of the for loop that acts as a catch-all for any incorrect answer
+  - if you added this into the inside of the for statement, the negative alert would run every single time a single item in the array is read
+*/
 var counterAnswer6 = 0;
 while(counterAnswer6 < 4) {
   var Answer6 = parseInt(prompt('How many states has Dylan lived in, including Washington State? You only get 4 tries.'));
